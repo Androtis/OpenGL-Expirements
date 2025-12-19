@@ -1,6 +1,5 @@
 #define STB_IMAGE_IMPLEMENTATION
 #pragma warning(disable : 4996)
-#define GL_SILENCE_DEPRECATION
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include "stb_image.h"
@@ -169,7 +168,7 @@ void preparePath() {
             currentPath[i] = newChar;
         }
     }
-    strcpy_s(curPath, currentPath.c_str());
+    strcpy(curPath, currentPath.c_str());
     strcpy(vertexPath, curPath);
     strcpy(fragPath, curPath);
     strcpy(tex1Path, curPath);
